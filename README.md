@@ -1,5 +1,4 @@
-(10 pts) Full commented code and the code is clean, formatted
- - 
+Group Project Computer Systems Security
  
 (10 pts) The README file in the zip folder should contain description of the project or GitHub repository indicates clearly how to easily clone and build/deploy the code. The README file in the GitHub repository clearly indicates what functionality does (and does not, if applicable) work in the final version of the application.
  - This project contains all of the code for the intrusion system as well as a few added files from our group.
@@ -9,9 +8,9 @@
    - 
  
 (10pts) Any data required to test/demo the application has been provided within the project. Instructor can run the code and reproduce the results shown in the class.
- - All data is proviuded in this github with our additional code files integrated.
+ - All data is provided in this github with our additional code files integrated.
  
-######################################################################################################################################################################
+###########################################################################################################
 # Intrusion-Detection-System-Using-Machine-Learning
 
 This repository contains the code for the project "IDS-ML: Intrusion Detection System Development Using Machine Learning". The code and proposed Intrusion Detection System (IDSs) are general models that can be used in any IDS and anomaly detection applications. In this project, three papers have been published:  
