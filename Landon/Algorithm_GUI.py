@@ -28,17 +28,9 @@ def run_boost_algorithm():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     # Make predictions on the test data using the trained model
-    model = lgb.LGBMClassifier()
-    model.fit(X_train, y_train)   # Need to call fit here before exploiting the model using .predict()
-    y_pred_LGBM = model.predict(X_test)
-
-    model = xgb.XGBClassifier()
-    model.fit(X_train, y_train)
-    y_pred_XGB = model.predict(X_test)
-
-    model = cbt.CatBoostClassifier(verbose=0)
-    model.fit(X_train, y_train)
-    y_pred_Cat = model.predict(X_test)
+    y_pred_LGBM = lgb.LGBMClassifier()
+    y_pred_XGB = xgb.XGBClassifier()
+    y_pred_Cat = cbt.CatBoostClassifier(verbose=0)
 
     # Train the selected boost algorithm on the training data
     y_pred_LGBM.fit(X_train, y_train)
