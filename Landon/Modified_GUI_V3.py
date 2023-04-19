@@ -53,6 +53,20 @@ def run_boost_algorithm():
     report_dict[2] = (classification_report(y_test, y_pred_Cat.predict(X_test)),
                             confusion_matrix(y_test, y_pred_Cat.predict(X_test)))
 
+    # Show report function
+    def show_report(report, matrix):
+        messagebox.showinfo("Classification Report", report)
+        plt.figure(figsize=(6, 6))
+        sns.heatmap(matrix, annot=True, cmap="Blues")
+        plt.xlabel("Predicted Label")
+        plt.ylabel("True Label")
+        plt.title("Confusion Matrix")
+        plt.show()
+        
+    # Display the reports
+    for i in range(3):
+        show_report(report_dict[i][0], report_dict[i][1])
+    
     # Create a new window to display the classification report and confusion matrix
     report_window = tk.Toplevel()
     report_window.title("Report for all algorithms")
@@ -81,3 +95,5 @@ run_button.pack(pady=10)
 
 # Start the GUI event loop
 root.mainloop()
+
+# Code I need to implement ASAP
