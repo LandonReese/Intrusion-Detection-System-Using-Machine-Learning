@@ -57,6 +57,8 @@ def run_boost_algorithm():
         
     # Display the reports
     for i in range(3):
+        # report_dict[i][0] is the classification report
+        # report_dict[i][1] is the confusion matrix
         show_report(report_dict[i][0], report_dict[i][1])
     
     # Create a new window to display the classification report and confusion matrix
@@ -68,7 +70,12 @@ def run_boost_algorithm():
     report_text.pack(pady=10)
 
     for i in range(3):
-        report_text.insert(tk.END, f"Algorithm {i+1}\n")
+        if i == 0:
+            report_text.insert(tk.END, "LightGBM\n")
+        elif i == 1:
+            report_text.insert(tk.END, "XGBoost\n")
+        elif i == 2:
+            report_text.insert(tk.END, "CatBoost\n")
         report_text.insert(tk.END, "Classification Report:\n" + report_dict[i][0] + "\n\n")
         report_text.insert(tk.END, "Confusion Matrix:\n" + str(report_dict[i][1]) + "\n\n")
 
