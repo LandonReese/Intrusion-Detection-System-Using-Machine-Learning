@@ -5,10 +5,10 @@ Group Project Computer Systems Security
    - We have added a Graphical User Interface to display the system properly functioning.
    - We have tweaked with algorithm to test new data inputs for an ioncreased amount of certainty in our final calculations.
    - We have added a function in the GUI to showcase which algorithm was used, and associated the type of intrusion with each attack.
-   - 
  
 (10pts) Any data required to test/demo the application has been provided within the project. Instructor can run the code and reproduce the results shown in the class.
  - All data is provided in this github with our additional code files integrated.
+ - In our requirements.txt you can see the version of each library we imported. Note, there is an issue installing river, and you may need to use pip3 install river instead to circumvent that.
  
 ###########################################################################################################
 # Intrusion-Detection-System-Using-Machine-Learning
